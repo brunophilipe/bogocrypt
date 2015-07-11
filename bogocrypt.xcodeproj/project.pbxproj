@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		150A19FB1B50E8CA00396BAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1515E5C31B44FE2C00978907 /* bogocrypt */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = bogocrypt; sourceTree = "<group>"; };
 		1515E5C41B44FE2C00978907 /* bogocrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bogocrypt.c; sourceTree = "<group>"; };
 		1515E5C51B44FE2C00978907 /* bogocrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bogocrypt.h; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		1515E5B71B44FE1500978907 = {
 			isa = PBXGroup;
 			children = (
+				150A19FB1B50E8CA00396BAC /* README.md */,
 				1515E5C21B44FE2C00978907 /* bin */,
 				1515E5C41B44FE2C00978907 /* bogocrypt.c */,
 				1515E5C51B44FE2C00978907 /* bogocrypt.h */,
