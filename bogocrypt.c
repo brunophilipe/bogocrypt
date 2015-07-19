@@ -27,8 +27,7 @@ int bogocrypt(const char *pInput, long pInputLength, const char *pKey, int pKeyL
 
 	for (int lInputIndex = 0; lInputIndex < pInputLength; ++lInputIndex)
 	{
-		lPosition = (unsigned int)(pKey[(lInputIndex + lPosition) % pKeyLength]) % pKeyLength;
-		
+		lPosition = (unsigned int)(pKey[(lInputIndex + lPosition) % pKeyLength] + (lInputIndex >= pKeyLength ? pInput[lInputIndex-pKeyLength] : 0)) % pKeyLength;
 		for (int lKeyIndex = 0; lKeyIndex < pKeyLength; ++lKeyIndex)
 		{
 			if (lKeyIndex == lPosition)
@@ -55,7 +54,7 @@ int bogodecrypt(const char *pInput, long pInputLength, const char *pKey, int pKe
 
 	for (int lOutputIndex = 0; lOutputIndex < lOutputLength; ++lOutputIndex)
 	{
-		lPosition = (unsigned int)(pKey[(lOutputIndex + lPosition) % pKeyLength]) % pKeyLength;
+		lPosition = (unsigned int)(pKey[(lOutputIndex + lPosition) % pKeyLength] + (lOutputIndex >= pKeyLength ? (*pOutput)[lOutputIndex-pKeyLength] : 0)) % pKeyLength;
 		char lCypher = pInput[lOutputIndex * pKeyLength + lPosition];
 		(*pOutput)[lOutputIndex] = pKey[lPosition] ^ lCypher;
 	}
